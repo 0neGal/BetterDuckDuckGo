@@ -1,6 +1,8 @@
 :root {
     --autoCompleteRounding: 10px;
     --searchBarRounding: 50px;
+    --disableSearchButton: block; // Set to none if you wan't it to not be shown
+    --searchHeaderShadow: 0px 3px 5px #0000001a;
 }
 
 .search__input, .search__input--adv {
@@ -10,6 +12,15 @@
 #search_button_homepage, .search--header .search__button {
 	transition:0.3s;
     border-radius: var(--searchBarRounding);
+    display:  var(--disableSearchButton)
+}
+
+.search__clear {
+    display:  var(--disableSearchButton)
+}
+
+.header-wrap {
+    box-shadow: var(--searchHeaderShadow)
 }
 
 .search--home, .search--header {
@@ -44,4 +55,17 @@
 
 .serp__results {
     margin-top:120px;
+}
+
+.tile-wrap {
+    position: absolute;
+top: 120px;
+}
+
+#zci-videos, .zci-wrap, .js-tileview, .zero_click_wrapper, .zci, .zci.is-active {
+    background:transparent;
+    border:none;
+}
+.js-tileview {
+    margin-top:100px;
 }
